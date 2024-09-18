@@ -22,11 +22,13 @@ FN_SCAN_NETWORKS    equ   $FD
 FN_SET_DEVICE_FULLPATH  equ       $E2
 FN_GET_DEVICE_FULLPATH	equ	   0xDA
 FN_MOUNT_IMAGE      equ       $F8
+FN_READ_DEVICE_SLOTS equ $F2
 	export     OP_FUJI
 	export     FN_SCAN_NETWORKS
 	export     FN_SET_DEVICE_FULLPATH
 	export     FN_GET_DEVICE_FULLPATH
 	export     FN_MOUNT_IMAGE
+                    export     FN_READ_DEVICE_SLOTS
                     endsect
                     
                     section   code
@@ -179,7 +181,7 @@ FNClose             lda       fujipath,u
 FNWrite             pshs      a
                     ldb       #SS.BlkWr
                     lda       fujipath,u
-					os9       I$SetStt
+                    os9       I$SetStt
                     puls      a,pc
 
 * FujiNet Send Response Command

@@ -42,6 +42,10 @@ FuncTbl             fdb       GetDevFile-FuncTbl
                     fcc       "scannetworks"
                     fcb       $0
 
+                    fdb       ReadDevSlots-FuncTbl
+                    fcc       "readdevslots"
+                    fcb       $0
+
                     fdb       $0
 
 * Help message
