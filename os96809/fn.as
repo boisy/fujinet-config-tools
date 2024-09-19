@@ -46,6 +46,10 @@ FuncTbl             fdb       GetDevFile-FuncTbl
                     fcc       "readdevslots"
                     fcb       $0
 
+                    fdb       ReadHostSlots-FuncTbl
+                    fcc       "readhostslots"
+                    fcb       $0
+
                     fdb       $0
 
 * Help message
