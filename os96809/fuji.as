@@ -25,6 +25,7 @@ FN_MOUNT_IMAGE      equ        $F8
 FN_READ_DEVICE_SLOTS equ       $F2
 FN_READ_HOST_SLOTS  equ        $F4
 FN_GET_WIFI_ENABLED	equ        $EA
+FN_MOUNT_ALL        equ        $D7
 	export     OP_FUJI
 	export     FN_SCAN_NETWORKS
 	export     FN_SET_DEVICE_FULLPATH
@@ -33,6 +34,7 @@ FN_GET_WIFI_ENABLED	equ        $EA
                     export     FN_READ_DEVICE_SLOTS
                     export     FN_READ_HOST_SLOTS
                     export     FN_GET_WIFI_ENABLED
+                    export     FN_MOUNT_ALL
                     endsect
                     
                     section   code

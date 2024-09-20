@@ -6,7 +6,9 @@ help                lbsr      PRINTS
 					rts
 					
 					export    ScanNetworks
-ScanNetworks        lbsr      FNOpen
+ScanNetworks        tst       ,x
+					bne       help
+                    lbsr      FNOpen
                     bcs       ex@
                     lbsr      DEC_BIN
                     pshs      b

@@ -9,14 +9,14 @@ sbuff               rmb       10
 help                lbsr      PRINTS
                     fcc       /Usage: getwifienabled/
                     fcb       C$CR,0
-					puls      d,y,pc
+					rts
 
 					export    GetWifiEnabled
-GetWifiEnabled      pshs      d,y
-                    lbsr      FNOpen
-                    bcs       ex@
-					tst       ,x
+GetWifiEnabled      tst       ,x
 					bne       help
+                    pshs      d,y
+					lbsr      FNOpen
+                    bcs       ex@
                     ldd       #OP_FUJI*256+FN_GET_WIFI_ENABLED
 					std       opcodes,u
 					leax      opcodes,u

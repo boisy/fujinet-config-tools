@@ -9,14 +9,14 @@ sbuff               rmb       10
 help                lbsr      PRINTS
                     fcc       /Usage: readhostslots/
                     fcb       C$CR,0
-					puls      d,y,pc
+					rts
 
 					export    ReadHostSlots
-ReadHostSlots       pshs      d,y
-                    lbsr      FNOpen
-                    bcs       ex@
-					tst       ,x
+ReadHostSlots       tst       ,x
 					bne       help
+                    pshs      d,y
+					lbsr      FNOpen
+                    bcs       ex@
                     ldd       #OP_FUJI*256+FN_READ_HOST_SLOTS
 					std       opcodes,u
 					leax      opcodes,u

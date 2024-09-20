@@ -54,6 +54,9 @@ FuncTbl             fdb       GetDevFile-FuncTbl
                     fcc       "getwifienabled"
                     fcb       $0
 
+                    fdb       MountAll-FuncTbl
+                    fcc       "mountall"
+                    fcb       $0
                     fdb       $0
 
 * Help message

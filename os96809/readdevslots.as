@@ -8,14 +8,14 @@ sbuff               rmb       10
 help                lbsr      PRINTS
                     fcc       /Usage: readdevslots/
                     fcb       C$CR,0
-					puls      d,y,pc
+					rts
 
 					export    ReadDevSlots
-ReadDevSlots        pshs      d,y
+ReadDevSlots        tst       ,x
+					bne       help
+					pshs      d,y
                     lbsr      FNOpen
                     bcs       ex@
-					tst       ,x
-					bne       help
                     ldd       #OP_FUJI*256+FN_READ_DEVICE_SLOTS
 					std       opcodes,u
 					leax      opcodes,u
