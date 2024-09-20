@@ -50,6 +50,10 @@ FuncTbl             fdb       GetDevFile-FuncTbl
                     fcc       "readhostslots"
                     fcb       $0
 
+                    fdb       GetWifiEnabled-FuncTbl
+                    fcc       "getwifienabled"
+                    fcb       $0
+
                     fdb       $0
 
 * Help message

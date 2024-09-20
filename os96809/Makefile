@@ -1,5 +1,6 @@
 CMDS = fn 
-OBJS = libs/libfuji.a getdevfile.o setdevfile.o scannetworks.o readdevslots.o readhostslots.o
+OBJS = libs/libfuji.a getdevfile.o setdevfile.o scannetworks.o readdevslots.o readhostslots.o \
+	getwifienabled.o
 
 DSKNAME = fntools.dsk
 
